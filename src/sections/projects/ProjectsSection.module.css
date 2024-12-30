@@ -1,0 +1,86 @@
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 2rem;
+
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem;
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projectItem {
+  background-color: #1c1c1c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  overflow: hidden;
+  @media (max-width: 700px) {
+    width: 80%;
+    justify-self: center;
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+}
+
+.projectImage {
+  width: 100%;
+  aspect-ratio: 1.5;
+  object-fit: cover;
+  object-position: left;
+
+  @media (max-width: 1100px) {
+    aspect-ratio: 1.7;
+  }
+
+  @media (max-width: 500px) {
+    aspect-ratio: 1.5;
+  }
+}
+
+.projectInfo {
+  padding: 2.4rem;
+}
+
+.projectItem h3 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--color-gray-100);
+  margin-bottom: 1.2rem;
+}
+
+.projectDescription {
+  font-size: 1.4rem;
+  color: var(--color-gray-300);
+  margin-bottom: 2.4rem;
+  line-height: 1.2;
+}
+
+.techStack {
+  margin-bottom: 1.6rem;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: transparent;
+  background-image: linear-gradient(45deg, var(--color-emerald-500), #38bdf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.projectLinks {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.iconUp {
+  transform: rotate(45deg);
+}

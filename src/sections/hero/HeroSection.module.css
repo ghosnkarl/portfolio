@@ -1,0 +1,159 @@
+.hero {
+  padding-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-margin-top: 10rem;
+}
+
+.heroHeading {
+  position: relative;
+}
+
+.name {
+  font-size: 6.4rem;
+  margin-bottom: 3.2rem;
+  color: transparent;
+  background-image: linear-gradient(45deg, var(--color-emerald-500), #38bdf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+
+  @media (max-width: 520px) {
+    font-size: 4.8rem;
+  }
+}
+
+.emoji {
+  width: 14rem;
+  border: 3px solid var(--color-gray-200);
+  border-radius: 1000px;
+  margin-bottom: 3.2rem;
+}
+
+.heroText {
+  font-weight: 400;
+  font-size: 3.8rem;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 85rem;
+  margin-bottom: 5.6rem;
+
+  @media (max-width: 520px) {
+    font-size: 2.6rem;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.heroText span {
+  font-weight: 600;
+}
+
+.companyLink:link,
+.companyLink:visited {
+  text-decoration: underline;
+  font-weight: 600;
+  color: white;
+
+  &:hover,
+  &:active {
+    color: var(--color-gray-300);
+  }
+}
+
+.contactContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 520px) {
+    gap: 1.2rem;
+  }
+}
+
+.contactButton:link,
+.contactButton:visited {
+  padding: 1.6rem 3.6rem;
+  border-radius: 1000px;
+  background-color: var(--color-emerald-600);
+  color: var(--color-gray-900) !important;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+
+  &:hover,
+  &:active {
+    background-color: var(--color-emerald-700);
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}
+
+.downloadButton:link,
+.downloadButton:visited {
+  padding: 1.6rem 3.6rem;
+  border-radius: 1000px;
+  border: 1px solid var(--color-emerald-600);
+  color: var(--color-emerald-600) !important;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+
+  &:hover,
+  &:active {
+    background-color: var(--color-emerald-700);
+    color: var(--color-gray-900) !important;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}
+
+.socialButton:link,
+.socialButton:visited {
+  padding: 1.6rem;
+  border-radius: 1000px;
+  border: 1px solid var(--color-emerald-600);
+  color: var(--color-emerald-600) !important;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:active {
+    background-color: var(--color-emerald-700);
+    color: var(--color-gray-900) !important;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}
