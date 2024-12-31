@@ -11,8 +11,9 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 
 Here's a preview of the website!
 
-![Portfolio Screenshot 1](./src/assets/portfolio_screenshot_1.png)
-![Portfolio Screenshot 2](./src/assets/portfolio_screenshot_2.png)
+| Hero Section                                                       | Skills Section                                                     |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| ![Portfolio Screenshot 1](./src/assets/portfolio_screenshot_1.png) | ![Portfolio Screenshot 2](./src/assets/portfolio_screenshot_2.png) |
 
 ---
 
