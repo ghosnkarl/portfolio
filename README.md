@@ -1,50 +1,42 @@
-# React + TypeScript + Vite
+# 🌟 Karl G. - Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my portfolio website! This project showcases my skills, projects, and experience as a developer. It’s built with **React**, **Vite**, and **TypeScript**, and it features a modern design with a dark theme (#0a0a0a background).
 
-Currently, two official plugins are available:
+🚀 **[Live Demo](https://karlg-portfolio.netlify.app/)**  
+💻 **[Source Code](https://github.com/ghosnkarl/portfolio)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+![Portfolio Screenshot](./assets/portfolio-screenshot.png)  
+_Showcasing the sleek and minimalistic design of my portfolio website._
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠️ Tech Stack
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Frameworks & Libraries:** React, Vite
+- **Programming Language:** TypeScript
+- **Styling:** CSS (Dark theme)
+- **Deployment:** Netlify
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## ✨ Features
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+- **Responsive Design:** Fully optimized for desktop and mobile devices.
+- **Project Showcase:** A section highlighting my notable projects with live links.
+- **Contact Form:** Allows visitors to reach out directly.
+- **Smooth Animations:** Subtle, modern animations for enhanced user experience.
+
+---
+
+## 📂 Directory Structure
+
+```plaintext
+src/
+├── assets/          # Images and icons
+├── components/      # Reusable UI components
+├── pages/           # Main pages (e.g., Home, About, Projects, Contact)
+├── styles/          # CSS stylesheets
+└── utils/           # Helper functions and utilities
 ```
