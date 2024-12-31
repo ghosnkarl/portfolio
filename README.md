@@ -1,27 +1,32 @@
 # 🌟 Karl G. - Portfolio Website
 
-Welcome to my portfolio website! This project showcases my skills, projects, and experience as a developer. It’s built with **React**, **Vite**, and **TypeScript**, and it features a modern design with a dark theme (#0a0a0a background).
+Welcome to my portfolio website! This project showcases my skills, projects, and experience as a developer. It’s built with **React**, **Vite**, and **TypeScript**, and it features a modern design with a dark theme.
 
 🚀 **[Live Demo](https://karlg-portfolio.netlify.app/)**  
 💻 **[Source Code](https://github.com/ghosnkarl/portfolio)**
 
 ---
 
-![Portfolio Screenshot](./assets/portfolio-screenshot.png)  
-_Showcasing the sleek and minimalistic design of my portfolio website._
+# 📸 Screenshots
+
+Here's a preview of the website!
+
+![Portfolio Screenshot 1](./src/assets/portfolio_screenshot_1.png)
+![Portfolio Screenshot 2](./src/assets/portfolio_screenshot_2.png)
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 - **Frameworks & Libraries:** React, Vite
 - **Programming Language:** TypeScript
 - **Styling:** CSS (Dark theme)
+- **Animations:** Framer Motion
 - **Deployment:** Netlify
 
 ---
 
-## ✨ Features
+# ✨ Features
 
 - **Responsive Design:** Fully optimized for desktop and mobile devices.
 - **Project Showcase:** A section highlighting my notable projects with live links.
@@ -30,13 +35,10 @@ _Showcasing the sleek and minimalistic design of my portfolio website._
 
 ---
 
-## 📂 Directory Structure
+# 📝 License
 
-```plaintext
-src/
-├── assets/          # Images and icons
-├── components/      # Reusable UI components
-├── pages/           # Main pages (e.g., Home, About, Projects, Contact)
-├── styles/          # CSS stylesheets
-└── utils/           # Helper functions and utilities
-```
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/ghosnkarl/portfolio/blob/styling_fixes/LICENSE) file for details.
+
+---
+
+🎉 Thank you for checking out my portfolio! Feel free to connect with me or leave feedback. 🚀
