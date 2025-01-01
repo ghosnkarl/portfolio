@@ -20,6 +20,7 @@ import {
   SiXcode,
 } from 'react-icons/si';
 import movieReelImg from '@/assets/movieReel.png';
+import reactSearchImg from '@/assets/react_api_search.png';
 import { BsSendFill } from 'react-icons/bs';
 import {
   MdEmail,
@@ -103,9 +104,18 @@ const skills = [
 
 const projects = [
   {
+    title: 'React API Search',
+    image: reactSearchImg,
+    techStack: ['TypeScript'],
+    description:
+      'A customizable and responsive search bar component for React applications.',
+    webLink: 'https://codesandbox.io/p/sandbox/3jz3z2',
+    githubLink: 'https://github.com/ghosnkarl/react-api-search',
+  },
+  {
     title: 'MovieReel',
     image: movieReelImg,
-    techStack: ['React', 'TypeScript', 'Tanstack Query', 'Framer Motion'],
+    techStack: ['TypeScript', 'Tanstack Query', 'Framer Motion'],
     description:
       'MovieReel allows users to explore movies, TV shows, and related content with ease, providing a rich and engaging experience for movie enthusiasts.',
     webLink: 'http://movie-reel.netlify.app',
