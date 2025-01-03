@@ -1,8 +1,15 @@
+.container {
+  max-width: var(--page-width--max);
+  margin: 0 auto;
+  padding: 0 var(--page-padding--horizontal) 1.4rem
+    var(--page-padding--horizontal);
+  scroll-margin-top: 10rem;
+}
+
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
-  margin-top: 2rem;
 
   @media (max-width: 1100px) {
     grid-template-columns: repeat(2, 1fr);
