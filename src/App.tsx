@@ -7,10 +7,11 @@ import ProjectsSection from './sections/projects/ProjectsSection';
 import SkillsSection from './sections/skills/SkillsSection';
 import FooterSection from './sections/footer/FooterSection';
 import ActiveSectionContextProvider from './context/activeSectionContext';
+import TapeSection from './sections/tapeSection/TapeSection';
 
 function App() {
   return (
-    <div className='container'>
+    <div>
       <ActiveSectionContextProvider>
         <ToastContainer
           position='top-right'
@@ -26,7 +27,7 @@ function App() {
         />
         <Header />
         <HeroSection />
-
+        <TapeSection />
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />

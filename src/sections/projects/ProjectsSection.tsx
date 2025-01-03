@@ -10,7 +10,7 @@ import useSectionInView from '@/lib/hooks';
 const ProjectsSection = () => {
   const { ref } = useSectionInView('Projects', 0.7);
   return (
-    <section id='projects' ref={ref}>
+    <section id='projects' ref={ref} className={classes.container}>
       <SectionHeading title='Projects' />
       <div className={classes.projectsGrid}>
         {data.projects.map((project, index) => (

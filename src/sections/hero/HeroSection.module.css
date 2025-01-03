@@ -1,9 +1,13 @@
 .hero {
-  padding-top: 3.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   scroll-margin-top: 10rem;
+
+  max-width: var(--page-width--max);
+  margin: 0 auto;
+  padding: 12.8rem var(--page-padding--horizontal) 1.4rem
+    var(--page-padding--horizontal);
 }
 
 .heroHeading {
