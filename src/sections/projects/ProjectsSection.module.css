@@ -1,95 +1,150 @@
 .container {
-  max-width: var(--page-width--max);
+  max-width: 100rem;
   margin: 0 auto;
   padding: 0 var(--page-padding--horizontal) 1.4rem
     var(--page-padding--horizontal);
   scroll-margin-top: 10rem;
+
+  @media (max-width: 1000px) {
+    max-width: 80rem;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 40rem;
+  }
 }
 
-.projectsGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
-
-  @media (max-width: 1100px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.4rem;
-  }
-
-  @media (max-width: 700px) {
-    grid-template-columns: 1fr;
-  }
+.projectsList {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
 }
 
 .projectItem {
   background-color: #1c1c1c;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-
+  height: 45rem;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4.8rem;
+  padding: 4.8rem 0 0 4.8rem;
   overflow: hidden;
-  @media (max-width: 700px) {
-    width: 80%;
-    justify-self: center;
+  align-items: center;
+
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding: 4.8rem 4.8rem 0 4.8rem;
+    align-items: flex-start;
+    gap: 2.4rem;
   }
 
-  @media (max-width: 500px) {
-    width: 100%;
+  @media (max-width: 600px) {
+    padding: 2.4rem 2.4rem 0 2.4rem;
   }
 }
 
 .projectImage {
   width: 100%;
-  aspect-ratio: 1.5;
+  height: 100%;
   object-fit: cover;
+  border-top-left-radius: 10px;
   object-position: left;
 
-  @media (max-width: 1100px) {
-    aspect-ratio: 1.7;
+  @media (max-width: 1000px) {
+    border-top-right-radius: 10px;
+    height: 35rem;
+    object-position: top;
   }
 
-  @media (max-width: 500px) {
-    aspect-ratio: 1.5;
+  @media (max-width: 600px) {
+    height: 20rem;
   }
 }
 
 .projectInfo {
-  padding: 2.4rem;
   display: flex;
   flex-direction: column;
-  flex: 1;
-}
-
-.projectItem h3 {
-  font-size: 2.2rem;
-  font-weight: 500;
-  color: var(--color-gray-100);
-  margin-bottom: 1.2rem;
-}
-
-.projectDescription {
-  font-size: 1.4rem;
-  color: var(--color-gray-300);
-  margin-bottom: 2.4rem;
-  line-height: 1.2;
+  width: 100%;
+  padding-bottom: 2rem;
 }
 
 .techStack {
-  margin-bottom: 1.6rem;
-  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
   line-height: 1.4;
   color: transparent;
   background-image: linear-gradient(45deg, var(--color-emerald-500), #38bdf8);
   -webkit-background-clip: text;
   background-clip: text;
+
+  @media (max-width: 600px) {
+    font-size: 1.6rem;
+  }
+}
+
+.projectItem h3 {
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--color-gray-100);
+  margin-bottom: 2.4rem;
+
+  @media (max-width: 600px) {
+    font-size: 3rem;
+  }
+}
+
+.divider {
+  border: none;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-gray-600);
+  margin-bottom: 3.2rem;
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 2.4rem;
+  margin-bottom: 3.2rem;
+
+  @media (max-width: 600px) {
+    gap: 1.6rem;
+  }
+}
+
+.feature {
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-gray-300);
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+
+  @media (max-width: 600px) {
+    font-size: 1.5rem;
+  }
+}
+
+.checkIcon {
+  font-size: 2.2rem;
+
+  @media (max-width: 600px) {
+    font-size: 2rem;
+  }
 }
 
 .projectLinks {
   display: flex;
   gap: 1.4rem;
-  justify-self: flex-end;
-  margin-top: auto;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 }
 
 .iconUp {

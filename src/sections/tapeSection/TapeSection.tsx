@@ -20,7 +20,7 @@ const TapeSection = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 0.175, duration: 2, ease: 'easeInOut' }}
+      transition={{ delay: 0.175, duration: 1, ease: 'easeInOut' }}
       className={styles.container}
     >
       <div className={styles.tapeContainer}>

@@ -107,8 +107,12 @@ const projects = [
     title: 'React API Search',
     image: reactSearchImg,
     techStack: ['TypeScript'],
-    description:
-      'A customizable and responsive search bar component for React applications.',
+    features: [
+      'Easily apply custom styles',
+      'Results list dropdown',
+      'Loading and error states',
+    ],
+
     webLink: 'https://codesandbox.io/p/sandbox/3jz3z2',
     githubLink: 'https://github.com/ghosnkarl/react-api-search',
   },
@@ -116,8 +120,12 @@ const projects = [
     title: 'MovieReel',
     image: movieReelImg,
     techStack: ['TypeScript', 'Tanstack Query', 'Framer Motion'],
-    description:
-      'MovieReel allows users to explore movies, TV shows, and related content with ease, providing a rich and engaging experience for movie enthusiasts.',
+    features: [
+      'Browse movies and TV shows',
+      'View detailed information',
+      'User-friendly interface',
+    ],
+
     webLink: 'http://movie-reel.netlify.app',
     githubLink: 'https://github.com/ghosnkarl/MovieReel',
   },
