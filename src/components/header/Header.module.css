@@ -36,7 +36,7 @@
   backdrop-filter: blur(0.5rem);
   transform: translateX(-50%);
   border-radius: 1000px;
-  width: 52rem;
+  width: 68rem;
 }
 
 .navigation {
@@ -86,7 +86,7 @@
   z-index: -10;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   .headerContent,
   .navigation {
     display: none;

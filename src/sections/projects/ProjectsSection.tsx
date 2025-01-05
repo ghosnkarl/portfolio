@@ -64,7 +64,7 @@ const Project = ({ project }: { project: (typeof data.projects)[number] }) => {
 };
 
 const ProjectsSection = () => {
-  const { ref } = useSectionInView('Projects', 0.7);
+  const { ref } = useSectionInView('Projects', 0.5);
 
   return (
     <section id='projects' ref={ref} className={classes.container}>
