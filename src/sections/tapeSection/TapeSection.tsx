@@ -20,23 +20,18 @@ const TapeSection = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 0.175, duration: 2, ease: 'easeInOut' }}
+      transition={{ delay: 0.175, duration: 1, ease: 'easeInOut' }}
       className={styles.container}
     >
       <div className={styles.tapeContainer}>
         <div className={styles.tapeContent}>
           <ul className={styles.tapeList}>
-            {[...new Array(2)].fill(0).map((_, index) => (
+            {[...Array(2)].map((_, index) => (
               <li className={styles.tapeItem} key={index}>
                 {words.map((word) => (
-                  <div key={word} className={styles.tapeItemContainer}>
-                    <span className={styles.tapeItemWord}>{word}</span>
-                    <img
-                      src={starIcon}
-                      alt='Star Icon'
-                      className={styles.tapeItemIcon}
-                    />
-                  </div>
+                  <span key={word} className={styles.tapeItemContainer}>
+                    {word} <img src={starIcon} alt='Star Icon' />
+                  </span>
                 ))}
               </li>
             ))}
