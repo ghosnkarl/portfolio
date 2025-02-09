@@ -44,14 +44,16 @@ const Project = ({ project }: { project: (typeof data.projects)[number] }) => {
           >
             Website <GrLinkUp className={classes.iconUp} />
           </a>
-          <a
-            className='button button--secondary button--project'
-            href={project.githubLink}
-            target='_blank'
-          >
-            Github
-            <FaGithub />
-          </a>
+          {project.githubLink && (
+            <a
+              className='button button--secondary button--project'
+              href={project.githubLink}
+              target='_blank'
+            >
+              Github
+              <FaGithub />
+            </a>
+          )}
         </div>
       </div>
       <img

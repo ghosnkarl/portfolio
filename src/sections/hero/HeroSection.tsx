@@ -42,7 +42,7 @@ const HeroSection = () => {
         initial={{ opacity: 0, y: 150 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Hi, I&apos;m a <span>full-stack developer</span> at{' '}
+        Hi, I&apos;m a <span>software engineer</span> at{' '}
         <a
           href='https://neuralvisionlab.com/'
           className={classes.companyLink}

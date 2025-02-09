@@ -7,6 +7,7 @@ import {
   FaLocationDot,
   FaNodeJs,
   FaPhone,
+  FaPython,
   FaReact,
 } from 'react-icons/fa6';
 import { RiNextjsFill } from 'react-icons/ri';
@@ -15,12 +16,14 @@ import {
   SiExpress,
   SiJavascript,
   SiMongodb,
+  SiPytorch,
   SiRedux,
   SiTypescript,
   SiXcode,
 } from 'react-icons/si';
 import movieReelImg from '@/assets/movieReel.png';
 import reactSearchImg from '@/assets/react_api_search.png';
+import stevenAstroImg from '@/assets/steven_astro.png';
 import { BsSendFill } from 'react-icons/bs';
 import {
   MdEmail,
@@ -97,6 +100,14 @@ const skills = [
   },
   { title: 'Mongodb', icon: <SiMongodb /> },
   {
+    title: 'Python',
+    icon: <FaPython />,
+  },
+  {
+    title: 'Machine Learning',
+    icon: <SiPytorch />,
+  },
+  {
     title: 'Android',
     icon: <SiAndroidstudio />,
   },
@@ -108,18 +119,19 @@ const skills = [
 
 const projects = [
   {
-    title: 'React API Search',
-    image: reactSearchImg,
-    techStack: ['TypeScript'],
+    title: 'StevenAstro',
+    image: stevenAstroImg,
+    techStack: ['TypeScript', 'Framer Motion', 'AWS'],
     features: [
-      'Easily apply custom styles',
-      'Results list dropdown',
-      'Loading and error states',
+      'Explore astronomy photos',
+      'Order beautiful prints',
+      'Bring astronomy to your home',
     ],
 
-    webLink: 'https://codesandbox.io/p/sandbox/3jz3z2',
-    githubLink: 'https://github.com/ghosnkarl/react-api-search',
+    webLink: 'https://d189nbh08vmfvq.cloudfront.net/',
+    githubLink: null,
   },
+
   {
     title: 'MovieReel',
     image: movieReelImg,
@@ -132,6 +144,19 @@ const projects = [
 
     webLink: 'http://movie-reel.netlify.app',
     githubLink: 'https://github.com/ghosnkarl/MovieReel',
+  },
+  {
+    title: 'React API Search',
+    image: reactSearchImg,
+    techStack: ['TypeScript'],
+    features: [
+      'Easily apply custom styles',
+      'Results list dropdown',
+      'Loading and error states',
+    ],
+
+    webLink: 'https://codesandbox.io/p/sandbox/3jz3z2',
+    githubLink: 'https://github.com/ghosnkarl/react-api-search',
   },
 ] as const;
 
@@ -231,6 +256,27 @@ const certifications = [
     date: 'Janurary 2025',
     url: 'https://ude.my/UC-70623ec7-9f3c-47b6-b731-8e31c64d4db4',
     skills: ['AWS', 'Typescript'],
+  },
+  {
+    title: '100 Days of Code: The Complete Python Pro Bootcamp',
+    organization: 'Udemy',
+    date: 'Janurary 2025',
+    url: 'https://ude.my/UC-f1ddcd99-d221-4c83-9bf0-48b9e9c1afb5',
+    skills: ['Python'],
+  },
+  {
+    title: 'Python for Data Science and Machine Learning Bootcamp',
+    organization: 'Udemy',
+    date: 'Janurary 2025',
+    url: 'https://ude.my/UC-cb9e96ec-9fdf-41f8-af0d-a416051d2e5d',
+    skills: ['Machine Learning', 'AI'],
+  },
+  {
+    title: 'Artificial Intelligence A-Z 2025: Build 7 AI + LLM & ChatGPT',
+    organization: 'Udemy',
+    date: 'February 2025',
+    url: 'https://ude.my/UC-cefc730d-64cd-44af-8416-1078c944aa2f',
+    skills: ['Machine Learning', 'PyTorch'],
   },
 ];
 
