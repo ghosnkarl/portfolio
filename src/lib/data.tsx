@@ -12,14 +12,12 @@ import {
 } from 'react-icons/fa6';
 import { RiNextjsFill } from 'react-icons/ri';
 import {
-  SiAndroidstudio,
   SiExpress,
   SiJavascript,
   SiMongodb,
   SiPytorch,
   SiRedux,
   SiTypescript,
-  SiXcode,
 } from 'react-icons/si';
 import movieReelImg from '@/assets/movieReel.png';
 import reactSearchImg from '@/assets/react_api_search.png';
@@ -40,6 +38,7 @@ const navigationItems = [
     title: 'About',
     link: '#about',
   },
+  { title: 'Services', link: '#services' },
   {
     title: 'Skills',
     link: '#skills',
@@ -106,14 +105,6 @@ const skills = [
   {
     title: 'Machine Learning',
     icon: <SiPytorch />,
-  },
-  {
-    title: 'Android',
-    icon: <SiAndroidstudio />,
-  },
-  {
-    title: 'iOS',
-    icon: <SiXcode />,
   },
 ] as const;
 

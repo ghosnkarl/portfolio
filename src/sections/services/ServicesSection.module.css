@@ -1,0 +1,105 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-margin-top: 10rem;
+  max-width: var(--page-width--max);
+  margin: 0 auto;
+  padding: 8rem var(--page-padding--horizontal) 4rem
+    var(--page-padding--horizontal);
+}
+
+.servicesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3.2rem;
+  width: 100%;
+  margin-top: 2.4rem;
+}
+
+.serviceCard {
+  background: linear-gradient(
+    135deg,
+    rgba(38, 38, 38, 0.8),
+    rgba(23, 23, 23, 0.9)
+  );
+  border-radius: 1.6rem;
+  padding: 3.2rem 2.4rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(52, 211, 153, 0.1);
+}
+
+.serviceCard:hover {
+  border-color: rgba(52, 211, 153, 0.3);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3), 0 0 15px rgba(110, 231, 183, 0.1);
+}
+
+.iconContainer {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+  background: linear-gradient(45deg, var(--color-emerald-600), #38bdf8);
+}
+
+.serviceIcon {
+  font-size: 3.6rem;
+  color: var(--color-gray-900);
+}
+
+.serviceTitle {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+  color: white;
+  background-image: linear-gradient(45deg, var(--color-emerald-500), #38bdf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+}
+
+.serviceDescription {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--color-gray-300);
+  margin-bottom: 1.6rem;
+}
+
+@media (max-width: 768px) {
+  .servicesContainer {
+    grid-template-columns: 1fr;
+    max-width: 48rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .services {
+    padding-top: 4.8rem;
+  }
+
+  .serviceCard {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .iconContainer {
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+
+  .serviceIcon {
+    font-size: 3rem;
+  }
+
+  .serviceTitle {
+    font-size: 2rem;
+  }
+}

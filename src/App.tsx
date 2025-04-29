@@ -9,6 +9,7 @@ import FooterSection from './sections/footer/FooterSection';
 import ActiveSectionContextProvider from './context/activeSectionContext';
 import TapeSection from './sections/tapeSection/TapeSection';
 import CertificationsSection from './sections/certifications/CertificationsSection';
+import ServicesSection from './sections/services/ServicesSection';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <HeroSection />
         <TapeSection />
         <AboutSection />
+        <ServicesSection />
         <SkillsSection />
         <ProjectsSection />
         <CertificationsSection />
