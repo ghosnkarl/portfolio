@@ -19,6 +19,8 @@ import {
   SiRedux,
   SiTypescript,
 } from 'react-icons/si';
+
+export type ProjectType = 'Websites' | 'Machine Learning' | 'Libraries';
 import movieReelImg from '@/assets/movieReel.png';
 import reactSearchImg from '@/assets/react_api_search.png';
 import stevenAstroImg from '@/assets/steven_astro.png';
@@ -28,6 +30,7 @@ import {
   MdOutlineFileDownload,
   MdOutlineMailOutline,
 } from 'react-icons/md';
+import footVisionBigImg from '@/assets/foodvision_big.png';
 
 const navigationItems = [
   {
@@ -118,7 +121,7 @@ const projects = [
       'Order beautiful prints',
       'Bring astronomy to your home',
     ],
-
+    type: 'Websites',
     webLink: 'https://d189nbh08vmfvq.cloudfront.net/',
     githubLink: null,
   },
@@ -132,7 +135,7 @@ const projects = [
       'View detailed information',
       'User-friendly interface',
     ],
-
+    type: 'Websites',
     webLink: 'http://movie-reel.netlify.app',
     githubLink: 'https://github.com/ghosnkarl/MovieReel',
   },
@@ -145,9 +148,22 @@ const projects = [
       'Results list dropdown',
       'Loading and error states',
     ],
-
+    type: 'Libraries',
     webLink: 'https://codesandbox.io/p/sandbox/3jz3z2',
     githubLink: 'https://github.com/ghosnkarl/react-api-search',
+  },
+  {
+    title: 'FoodVision Big',
+    image: footVisionBigImg,
+    techStack: ['Python', 'Machine Learning', 'PyTorch'],
+    features: [
+      'Image classification with CNN',
+      'Food image recognition',
+      'Real-time food detection',
+    ],
+    type: 'Machine Learning',
+    webLink: 'https://huggingface.co/spaces/karlghosn/foodvision_big',
+    githubLink: null,
   },
 ] as const;
 
