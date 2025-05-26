@@ -28,6 +28,7 @@ import {
   MdOutlineFileDownload,
   MdOutlineMailOutline,
 } from 'react-icons/md';
+import footVisionBigImg from '@/assets/foodvision_big.png';
 
 const navigationItems = [
   {
@@ -148,6 +149,18 @@ const projects = [
 
     webLink: 'https://codesandbox.io/p/sandbox/3jz3z2',
     githubLink: 'https://github.com/ghosnkarl/react-api-search',
+  },
+  {
+    title: 'FoodVision Big',
+    image: footVisionBigImg,
+    techStack: ['Python', 'Machine Learning', 'PyTorch'],
+    features: [
+      'Image classification with CNN',
+      'Food image recognition',
+      'Real-time food detection',
+    ],
+    webLink: 'https://huggingface.co/spaces/karlghosn/foodvision_big',
+    githubLink: null,
   },
 ] as const;
 

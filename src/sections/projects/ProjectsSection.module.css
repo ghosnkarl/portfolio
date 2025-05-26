@@ -1,7 +1,7 @@
 .container {
-  max-width: 100rem;
+  max-width: 120rem;
   margin: 0 auto;
-  padding: 0 var(--page-padding--horizontal) 1.4rem
+  padding: 0 var(--page-padding--horizontal) 6rem
     var(--page-padding--horizontal);
   scroll-margin-top: 10rem;
 
@@ -14,82 +14,95 @@
   }
 }
 
-.projectsList {
-  display: flex;
-  flex-direction: column;
-  gap: 4.8rem;
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  gap: 3.5rem;
+  margin-top: 2rem;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
-.projectItem {
+.projectCard {
   background-color: #1c1c1c;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  height: 45rem;
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 4.8rem;
-  padding: 4.8rem 0 0 4.8rem;
+  border-radius: 1.2rem;
   overflow: hidden;
-  align-items: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  @media (max-width: 1000px) {
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-    padding: 4.8rem 4.8rem 0 4.8rem;
-    align-items: flex-start;
-    gap: 2.4rem;
+  &:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   }
+}
 
-  @media (max-width: 600px) {
-    padding: 2.4rem 2.4rem 0 2.4rem;
-  }
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 22rem;
+  overflow: hidden;
 }
 
 .projectImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  object-position: left;
+  transition: transform 0.5s ease;
+}
 
-  @media (max-width: 1000px) {
-    border-top-right-radius: 10px;
-    height: 35rem;
-    object-position: top;
-  }
+.projectCard:hover .projectImage {
+  transform: scale(1.05);
+}
 
-  @media (max-width: 600px) {
-    height: 20rem;
-  }
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.projectCard:hover .overlay {
+  opacity: 1;
 }
 
 .projectInfo {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding-bottom: 2rem;
+  padding: 2.4rem;
+  flex: 1;
 }
 
 .techStack {
   margin-bottom: 1.2rem;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 1.4;
   color: transparent;
   background-image: linear-gradient(45deg, var(--color-emerald-500), #38bdf8);
   -webkit-background-clip: text;
   background-clip: text;
-
-  @media (max-width: 600px) {
-    font-size: 1.6rem;
-  }
+  font-weight: 500;
 }
 
-.projectItem h3 {
-  font-size: 4rem;
-  font-weight: 500;
+.projectCard h3 {
+  font-size: 2.6rem;
+  font-weight: 600;
   color: var(--color-gray-100);
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.6rem;
 
   @media (max-width: 600px) {
     font-size: 3rem;
@@ -100,16 +113,22 @@
   border: none;
   width: 100%;
   height: 1px;
-  background-color: var(--color-gray-600);
-  margin-bottom: 3.2rem;
+  background: linear-gradient(
+    to right,
+    var(--color-emerald-500),
+    #38bdf8,
+    var(--color-emerald-500)
+  );
+  margin-bottom: 2rem;
+  opacity: 0.5;
 }
 
 .featuresList {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  gap: 2.4rem;
-  margin-bottom: 3.2rem;
+  gap: 1.4rem;
+  margin-bottom: 1.6rem;
 
   @media (max-width: 600px) {
     gap: 1.6rem;
@@ -117,13 +136,13 @@
 }
 
 .feature {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.3;
   color: var(--color-gray-300);
   display: flex;
-  gap: 1.2rem;
-  align-items: center;
+  gap: 1rem;
+  align-items: flex-start;
 
   @media (max-width: 600px) {
     font-size: 1.5rem;
@@ -131,7 +150,10 @@
 }
 
 .checkIcon {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
+  color: var(--color-emerald-500);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
 
   @media (max-width: 600px) {
     font-size: 2rem;
@@ -140,11 +162,27 @@
 
 .projectLinks {
   display: flex;
-  gap: 1.4rem;
+  gap: 1.2rem;
+  z-index: 10;
 
   @media (max-width: 600px) {
     flex-direction: column;
   }
+}
+
+.projectLinks a {
+  font-size: 1.4rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.projectLinks a:hover {
+  transform: translateY(-3px);
 }
 
 .iconUp {
