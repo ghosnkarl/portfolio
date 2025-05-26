@@ -6,7 +6,10 @@ import { FaGithub } from 'react-icons/fa6';
 import { GrLinkUp } from 'react-icons/gr';
 import useSectionInView from '@/lib/hooks';
 import { GoCheckCircle } from 'react-icons/go';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import { ProjectType } from '@/lib/data';
+
+type FilterType = ProjectType;
 
 const Project = ({ project }: { project: (typeof data.projects)[number] }) => {
   const itemRef = useRef<HTMLDivElement>(null);
@@ -76,15 +79,63 @@ const Project = ({ project }: { project: (typeof data.projects)[number] }) => {
 
 const ProjectsSection = () => {
   const { ref } = useSectionInView('Projects', 0.2);
+  const [activeTab, setActiveTab] = useState<FilterType>('Websites');
+
+  const filteredProjects = data.projects.filter(
+    (project) => project.type === activeTab
+  );
+
+  const tabItems: FilterType[] = ['Websites', 'Machine Learning', 'Libraries'];
 
   return (
     <section id='projects' ref={ref} className={classes.container}>
       <SectionHeading title='Projects' />
-      <div className={classes.projectsGrid}>
-        {data.projects.map((project) => (
-          <Project key={project.title} project={project} />
+
+      <motion.div
+        className={classes.tabsContainer}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        {tabItems.map((tabName) => (
+          <motion.button
+            key={tabName}
+            className={`${classes.tabItem} ${
+              activeTab === tabName ? classes.activeTab : ''
+            }`}
+            onClick={() => setActiveTab(tabName)}
+            whileHover={{ y: -3 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+          >
+            {tabName}
+          </motion.button>
         ))}
-      </div>
+      </motion.div>
+
+      <motion.div
+        className={classes.projectsGrid}
+        layout
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5, type: 'spring' }}
+      >
+        {filteredProjects.length > 0 ? (
+          filteredProjects.map((project) => (
+            <Project key={project.title} project={project} />
+          ))
+        ) : (
+          <motion.div
+            className={classes.noProjects}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+          >
+            No projects found in this category.
+          </motion.div>
+        )}
+      </motion.div>
     </section>
   );
 };
