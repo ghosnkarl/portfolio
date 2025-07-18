@@ -123,7 +123,7 @@ const projects = [
       'Bring astronomy to your home',
     ],
     type: 'Websites',
-    webLink: 'https://d189nbh08vmfvq.cloudfront.net/',
+    webLink: 'https://www.stevenastrophotography.com/',
     githubLink: null,
   },
 
