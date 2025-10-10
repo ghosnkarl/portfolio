@@ -31,7 +31,6 @@ import {
   MdOutlineMailOutline,
 } from 'react-icons/md';
 import footVisionBigImg from '@/assets/foodvision_big.png';
-import pytorchCmpleteImg from '@/assets/pytorch_complete.png';
 
 const navigationItems = [
   {
@@ -165,19 +164,6 @@ const projects = [
     type: 'Machine Learning',
     webLink: 'https://huggingface.co/spaces/karlghosn/foodvision_big',
     githubLink: null,
-  },
-  {
-    title: 'PyTorch Complete',
-    image: pytorchCmpleteImg,
-    techStack: ['Python', 'Machine Learning', 'PyTorch'],
-    features: [
-      'Comprehensive PyTorch course',
-      'Hands-on projects',
-      'Deep learning fundamentals',
-    ],
-    type: 'Machine Learning',
-    webLink: 'https://github.com/ghosnkarl/pytorch-complete',
-    githubLink: 'https://github.com/ghosnkarl/pytorch-complete',
   },
 ] as const;
 
