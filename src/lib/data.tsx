@@ -31,6 +31,7 @@ import {
   MdOutlineMailOutline,
 } from 'react-icons/md';
 import footVisionBigImg from '@/assets/foodvision_big.png';
+import portfolioChatImg from '@/assets/portfolio_chatbot.png';
 
 const navigationItems = [
   {
@@ -163,6 +164,19 @@ const projects = [
     ],
     type: 'Machine Learning',
     webLink: 'https://huggingface.co/spaces/karlghosn/foodvision_big',
+    githubLink: null,
+  },
+  {
+    title: 'Portfolio Chatbot',
+    image: portfolioChatImg,
+    techStack: ['Python', 'Groq', 'LLM'],
+    features: [
+      'AI-powered chatbot',
+      'Answer questions about my portfolio',
+      'Built with Groq LLM',
+    ],
+    type: 'Machine Learning',
+    webLink: 'https://huggingface.co/spaces/karlghosn/portfolio_chat',
     githubLink: null,
   },
 ] as const;
