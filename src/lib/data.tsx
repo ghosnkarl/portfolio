@@ -31,7 +31,7 @@ import {
   MdOutlineMailOutline,
 } from 'react-icons/md';
 import footVisionBigImg from '@/assets/foodvision_big.png';
-import portfolioChatImg from '@/assets/portfolio_chatbot.png';
+import portfolioChatImg from '@/assets/portfolio_chat.png';
 
 const navigationItems = [
   {
