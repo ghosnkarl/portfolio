@@ -8,7 +8,6 @@ import SkillsSection from './sections/skills/SkillsSection';
 import FooterSection from './sections/footer/FooterSection';
 import ActiveSectionContextProvider from './context/activeSectionContext';
 import TapeSection from './sections/tapeSection/TapeSection';
-import CertificationsSection from './sections/certifications/CertificationsSection';
 import ServicesSection from './sections/services/ServicesSection';
 
 function App() {
@@ -34,7 +33,6 @@ function App() {
         <ServicesSection />
         <SkillsSection />
         <ProjectsSection />
-        <CertificationsSection />
         <ContactSection />
         <FooterSection />
       </ActiveSectionContextProvider>

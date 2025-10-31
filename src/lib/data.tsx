@@ -32,6 +32,7 @@ import {
 } from 'react-icons/md';
 import footVisionBigImg from '@/assets/foodvision_big.png';
 import portfolioChatImg from '@/assets/portfolio_chat.png';
+import llmRagImg from '@/assets/llm_rag.png';
 
 const navigationItems = [
   {
@@ -50,10 +51,6 @@ const navigationItems = [
   {
     title: 'Projects',
     link: '#projects',
-  },
-  {
-    title: 'Certifications',
-    link: '#certifications',
   },
   {
     title: 'Contact',
@@ -179,6 +176,19 @@ const projects = [
     webLink: 'https://huggingface.co/spaces/karlghosn/portfolio_chat',
     githubLink: null,
   },
+  {
+    title: 'Obsidian RAG',
+    image: llmRagImg,
+    techStack: ['Python', 'LLM', 'RAG'],
+    features: [
+      'Retrieval-Augmented Generation system',
+      'Integrates with Obsidian notes',
+      'Provides context-aware responses',
+    ],
+    type: 'Machine Learning',
+    webLink: 'https://huggingface.co/spaces/karlghosn/obsidian-rag',
+    githubLink: null,
+  },
 ] as const;
 
 const heroLinks = [
@@ -228,90 +238,10 @@ const contactInfo = [
   { text: 'Mansourieh, Lebanon', icon: <FaLocationDot /> },
 ] as const;
 
-const certifications = [
-  {
-    title: 'Build Responsive Real-World Websites with HTML and CSS',
-    organization: 'Udemy',
-    date: 'June 2024',
-    url: 'https://www.ude.my/UC-b0a77341-52c2-4f3b-819e-b80f6ec40bcd',
-    skills: ['HTML', 'CSS'],
-  },
-  {
-    title: 'The Complete JavaScript Course 2024: From Zero to Expert!',
-    organization: 'Udemy',
-    date: 'July 2024',
-    url: 'https://ude.my/UC-04b6be04-e76a-4588-ba80-a264f10dfd00/',
-    skills: ['Javascript'],
-  },
-  {
-    title: 'Python Data Structures & Algorithms + LEETCODE Exercises',
-    organization: 'Udemy',
-    date: 'July 2024',
-    url: 'https://ude.my/UC-17158ad4-cec1-44e9-9264-c21f077501c4/',
-    skills: ['Data Structures', 'Algorithms'],
-  },
-  {
-    title: 'React - The Complete Guide 2024 (incl. Next.js, Redux)',
-    organization: 'Udemy',
-    date: 'August 2024',
-    url: 'https://ude.my/UC-e18f757c-3fd9-4b92-a3e9-af1751db4075/',
-    skills: ['React', 'Typescript', 'NextJS', 'Redux'],
-  },
-  {
-    title: 'Node.js, Express, MongoDB & More: The Complete Bootcamp',
-    organization: 'Udemy',
-    date: 'September 2024',
-    url: 'https://ude.my/UC-f5fcad09-092c-43da-a4c0-744f6329dcaa',
-    skills: ['NodeJS', 'Express', 'MongoDB'],
-  },
-  {
-    title: 'AWS Lambda & Serverless Architecture Bootcamp (Build 5 Apps)',
-    organization: 'Udemy',
-    date: 'September 2024',
-    url: 'https://ude.my/UC-03c24e29-09a4-4d2e-b33e-9e40428d1487/',
-    skills: ['AWS'],
-  },
-  {
-    title: 'AWS & Typescript Masterclass - CDK, Serverless, React',
-    organization: 'Udemy',
-    date: 'Janurary 2025',
-    url: 'https://ude.my/UC-70623ec7-9f3c-47b6-b731-8e31c64d4db4',
-    skills: ['AWS', 'Typescript'],
-  },
-  {
-    title: '100 Days of Code: The Complete Python Pro Bootcamp',
-    organization: 'Udemy',
-    date: 'Janurary 2025',
-    url: 'https://ude.my/UC-f1ddcd99-d221-4c83-9bf0-48b9e9c1afb5',
-    skills: ['Python'],
-  },
-  {
-    title: 'Python for Data Science and Machine Learning Bootcamp',
-    organization: 'Udemy',
-    date: 'Janurary 2025',
-    url: 'https://ude.my/UC-cb9e96ec-9fdf-41f8-af0d-a416051d2e5d',
-    skills: ['Machine Learning', 'AI'],
-  },
-  {
-    title: 'Artificial Intelligence A-Z 2025: Build 7 AI + LLM & ChatGPT',
-    organization: 'Udemy',
-    date: 'February 2025',
-    url: 'https://ude.my/UC-cefc730d-64cd-44af-8416-1078c944aa2f',
-    skills: ['Machine Learning', 'PyTorch'],
-  },
-];
-
-const sortedCertifications = certifications.sort((a, b) => {
-  const dateA = new Date(a.date);
-  const dateB = new Date(b.date);
-  return dateB.getTime() - dateA.getTime();
-});
-
 export const data = {
   skills,
   navigationItems,
   projects,
   heroLinks,
   contactInfo,
-  sortedCertifications,
 };
