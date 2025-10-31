@@ -9,7 +9,7 @@ import { GoCheckCircle } from 'react-icons/go';
 import { useRef, useState } from 'react';
 import { ProjectType } from '@/lib/data';
 
-type FilterType = ProjectType;
+type FilterType = ProjectType | 'All';
 
 const Project = ({ project }: { project: (typeof data.projects)[number] }) => {
   const itemRef = useRef<HTMLDivElement>(null);
@@ -18,16 +18,16 @@ const Project = ({ project }: { project: (typeof data.projects)[number] }) => {
     offset: ['0 1', '0.5 1'],
   });
 
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.85, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.3, 1]);
 
   return (
-    <motion.div
+    <motion.article
       className={classes.projectCard}
-      key={project.title}
       ref={itemRef}
       style={{ scale: scaleProgress, opacity: opacityProgress }}
-      whileHover={{ y: -10, transition: { duration: 0.3 } }}
+      whileHover={{ y: -8 }}
+      transition={{ duration: 0.3 }}
     >
       <div className={classes.imageContainer}>
         <img
@@ -35,57 +35,65 @@ const Project = ({ project }: { project: (typeof data.projects)[number] }) => {
           alt={project.title}
           className={classes.projectImage}
         />
-        <div className={classes.overlay}>
-          <div className={classes.projectLinks}>
-            <a
-              className='button button--primary button--project'
-              href={project.webLink}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              Website <GrLinkUp className={classes.iconUp} />
-            </a>
-            {project.githubLink && (
-              <a
-                className='button button--secondary button--project'
-                href={project.githubLink}
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                Github
-                <FaGithub />
-              </a>
-            )}
-          </div>
-        </div>
+        <div className={classes.imageGradient} />
       </div>
 
-      <div className={classes.projectInfo}>
-        <p className={classes.techStack}>{project.techStack.join(' • ')}</p>
-        <h3>{project.title}</h3>
-        <hr className={classes.divider} />
+      <div className={classes.projectContent}>
+        <div className={classes.projectHeader}>
+          <p className={classes.techStack}>{project.techStack.join(' • ')}</p>
+          <h3 className={classes.projectTitle}>{project.title}</h3>
+        </div>
+
         <ul className={classes.featuresList}>
           {project.features.map((feature) => (
             <li className={classes.feature} key={feature}>
               <GoCheckCircle className={classes.checkIcon} />
-              {feature}
+              <span>{feature}</span>
             </li>
           ))}
         </ul>
+
+        <div className={classes.projectLinks}>
+          <a
+            className='button button--primary button--project'
+            href={project.webLink}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            View Live <GrLinkUp className={classes.iconUp} />
+          </a>
+          {project.githubLink && (
+            <a
+              className='button button--secondary button--project'
+              href={project.githubLink}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <FaGithub />
+              Code
+            </a>
+          )}
+        </div>
       </div>
-    </motion.div>
+    </motion.article>
   );
 };
 
 const ProjectsSection = () => {
   const { ref } = useSectionInView('Projects', 0.2);
-  const [activeTab, setActiveTab] = useState<FilterType>('Websites');
+  const [activeTab, setActiveTab] = useState<FilterType>('All');
 
-  const filteredProjects = data.projects.filter(
-    (project) => project.type === activeTab
-  );
+  const filteredProjects =
+    activeTab === 'All'
+      ? data.projects
+      : data.projects.filter((project) => project.type === activeTab);
 
-  const tabItems: FilterType[] = ['Websites', 'Machine Learning', 'Libraries'];
+  const tabItems: FilterType[] = [
+    'All',
+    'Websites',
+    'Machine Learning',
+    'Libraries',
+  ];
 
   return (
     <section id='projects' ref={ref} className={classes.container}>
@@ -116,10 +124,10 @@ const ProjectsSection = () => {
       <motion.div
         className={classes.projectsGrid}
         layout
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 20 }}
-        transition={{ duration: 0.5, type: 'spring' }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.4 }}
       >
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project) => (
